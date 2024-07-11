@@ -1,0 +1,297 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2px  0px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+.header__search input {
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 20px;
+  background-color: #ddd;
+}
+
+.header__logo img {
+  height: 25px;
+  width: 25px;
+  padding: 20px;
+}
+
+.header__search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+  background-color: #ddd;
+  border-radius: 20px;
+}
+
+.header__search input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  margin-right: 10px;
+  background-color: #ddd;
+}
+
+.header__search button {
+  padding: 8px 12px;
+  background-color: transparent;
+  color: black;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+}
+
+.header__action {
+  margin-left: 10px;
+  padding: 8px 12px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.Create button {
+  margin-left: 10px;
+  padding: 8px 12px;
+  background-color: transparent;
+  color: black;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+img {
+  margin-left: 8px;
+  width: 16px;
+  height: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 30px;
+}
+
+.profile-icon {
+  background-color: rgb(211, 211, 211);
+  color: black;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 8px;
+  width: 26px;
+  height: 26px;
+  font-size: 14px;
+}
+:root {
+  --card_width: 250px;
+  --row_increment: 10px;
+  --card_border_radius: 16px;
+  --card_small: 26;
+  --card_medium: 33;
+  --card_large: 45;
+}
+.pin_container {
+  margin: 0;
+  padding: 10px;
+  width: 100vw;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, var(--card_width));
+  grid-auto-rows: var(--row_increment);
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  padding-top: 80px;
+}
+
+.card {
+  position: relative;
+  padding: 0;
+  margin: 30px 10px;
+  border-radius: var(--card_border_radius);
+  background-color: rgba(0, 0, 255, 0);
+}
+.card_small {
+  grid-row-end: span var(--card_small);
+}
+.card_medium {
+  grid-row-end: span var(--card_medium);
+}
+.card_large {
+  grid-row-end: span var(--card_large);
+}
+
+.card img {
+  width: 97%;
+  height: 100%;
+  padding: 0px;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+.card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Smooth transition */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-left: 4px;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 0px;
+  padding-top: 0px;
+}
+
+.profile-image {
+  width: 9px;
+  height: 10px;
+  object-fit: cover;
+  margin: 15px 10px;
+  background-color: #ddd;
+  border-radius: 50%;
+  padding: 0px;
+  transition: transform 0.3s ease;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 19px;
+  height: 21px;
+}
+
+.card h2 {
+  font-size: 9px;
+  margin: 5px 10px;
+  padding-left: 20px;
+}
+
+.card p {
+  font-size: 10px;
+  margin: 15px 10px;
+}
+
+.card p1 {
+  font-size: 10px;
+  margin: 15px 10px;
+  color: #ffffff;
+  align-self: flex-start;
+
+  background-color: aqua;
+}
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay .download-btn,
+.more-btn {
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 3px;
+  border-radius: 50%;
+  margin-left: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.saveDrop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 55px;
+}
+.catagoryIconsave{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+.overlay .save-btn {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: red;
+  color: #ffffff;
+  border-radius: 20px;
+  border-style: none;
+  font-size: 15px;
+  padding: 10px;
+  margin: 5px;
+}
+
+.downloadMore {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.overlay .downloadMore {
+  position: relative;
+  right: 0;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.dropdown-btn {
+  position: relative;
+  right: 0;
+  border: none;
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  margin: 10px 10px;
+}
+
+
+.catagory-container {
+  display: inline;
+  font-size: 10px;
+  color: #ffffff;
+  align-self: flex-start;
+  background-color: aqua;
+}
+
+
+.categoryOver {
+  font-size: 15px;
+  color: white;
+
+
+}
